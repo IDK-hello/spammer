@@ -1,6 +1,8 @@
 from tkinter import *
-import pyautogui
+import pynput
 from time import sleep
+
+keyboard = pynput.keyboard.Controller()
 
 root = Tk()
 root.title("spa><er")
@@ -10,16 +12,16 @@ root.minsize(600, 600)
 
 
 def mainspam():
+    sleep(5)
     for i in range(int(rep.get())):
-        sleep(5)
-        pyautogui.typewrite(keyword.get())
-        pyautogui.press('enter')
+        keyboard.type(keyword.get())
+        keyboard.press(pynput.keyboard.Key.enter)
+        keyboard.release(pynput.keyboard.Key.enter)
 
 # title banner
 
 
 # textbox for keyword
-
 
 labelWord = Label(root, text="keyword : ")
 labelWord.place(relx=0.3, rely=0.3)
