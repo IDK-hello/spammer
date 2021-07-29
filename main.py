@@ -20,6 +20,7 @@ def mainspam():
 
 # title banner
 
+# it's coming just wait a bit
 
 # textbox for keyword
 
